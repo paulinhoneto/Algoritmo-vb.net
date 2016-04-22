@@ -19,57 +19,33 @@ Module Module1
         Dim vlr_final As Double = 0
         Dim vlr_comissao As Double = 0
         Dim vlr_imposto As Double = 0
+
+        Console.Write("Entre com a marca do veículo : ")  '// mostra dados na tela como console 
+        marca = Console.ReadLine()                        '// lê a variável marca
+
+        Console.Write("Entre com o modelo do veículo : ") '// mostra dados na tela como console 
+        modelo = Console.ReadLine()                       '// lê a variável modelo
+
+        Console.Write("Entre com o valor do custo do veículo : ") '// mostra dados na tela como console
+        vlr_custo = Double.Parse(Console.ReadLine())              '// lê variável custo usa classe double.Parse para converter double para string
+
+        vlr_imposto = (vlr_custo * 0.45)  '// processamento para valor do imposto é 45% do valor do custo
+        vlr_comissao = (vlr_custo * 0.28) '// processamento para valor da comissão é 28% do valor do custo 
+
+        vlr_final = vlr_custo + vlr_imposto + vlr_comissao
+
+        Console.Write("-------------------------------" & vbCrLf)  '// o vbCrLf é um escape new line para salto de linha
+        Console.Write("Resultado Final" & vbCrLf)
+        Console.Write("-------------------------------" & vbCrLf)
+        Console.Write("Marca do veículo : " & marca & vbCrLf)
+        Console.Write("-------------------------------" & vbCrLf)
+        Console.Write("Modelo do veículo : " & modelo & vbCrLf)
+        Console.Write("-------------------------------" & vbCrLf)
+        Console.Write("Valor do veículo : " & vlr_final & vbCrLf)
+        Console.Write("-------------------------------")
+
+        Console.ReadKey() '// espera entrada do teclado para fechar aplicação.
+
     End Sub
 
 End Module
-
-'using System;
-'using System.Collections.Generic;
-'using System.Linq;
-'using System.Text;
-'using System.Threading.Tasks;
-
-'Namespace Algoritmo_01
-'{
-'    Class Program
-'    {
-'        static void Main(string[] args)
-'        {
-'            // inicializa e declara todas as variáveis como boas práticas de programação
-'            double vlr_custo     = 0; 
-'            String marca         = ""; // variáveis do tipo alfanúmericas inicializa com aspas duplas
-'            String modelo        = "";
-'            double vlr_final     = 0;
-'            double vlr_comissao  = 0;
-'            double vlr_imposto   = 0;
-
-
-'            Console.Write("Entre com a marca do veículo : ");  // mostra dados na tela como console 
-'            marca = Console.ReadLine(); // lê a variável marca
-
-'            Console.Write("Entre com o modelo do veículo : "); // mostra dados na tela como console
-'            modelo = Console.ReadLine(); // lê a variável modelo
-
-'            Console.Write("Entre com o valor do custo do veículo : "); // mostra dados na tela como console
-'            vlr_custo = double.Parse(Console.ReadLine()); // lê variável custo usa classe double.Parse para converter double para string
-
-'            vlr_imposto   = (vlr_custo * 0.45); // processamento para valor do imposto é 45% do valor do custo
-'            vlr_comissao  = (vlr_custo * 0.28); // processamento para valor da comissão é 28% do valor do custo 
-
-'            vlr_final = vlr_custo + vlr_imposto + vlr_comissao;
-
-'            Console.Write("-------------------------------     \n");  // o \n é um escape new line para salto de linha
-'            Console.Write("Resultado Final\n");
-'            Console.Write("-------------------------------     \n");
-'            Console.Write("Marca do veículo : " + marca +     "\n");
-'            Console.Write("-------------------------------     \n");
-'            Console.Write("Modelo do veículo : " + modelo +   "\n");
-'            Console.Write("-------------------------------     \n");
-'            Console.Write("Valor do veículo : " + vlr_final + "\n");
-'            Console.Write("-------------------------------");
-
-'            Console.ReadKey(); // espera entrada do teclado para fechar aplicação.
-
-'        }
-'    }
-'}
