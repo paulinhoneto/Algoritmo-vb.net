@@ -1,6 +1,6 @@
 ﻿'/*
-' * Author  : Antônio Paulo Neto
-' * File    : Program.cs
+' * Author  : Marcio Pereira de Sousa
+' * File    : Module1.vb
 ' * Project : Algoritmo_03
 ' * 
 ' * Faça um algoritmo para calcular quantas ferraduras são necessárias para equipar todos os
