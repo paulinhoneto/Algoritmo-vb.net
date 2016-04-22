@@ -36,7 +36,7 @@ Module Module1
         total_desconto = total_bruto - ((percentual_desc / 100) * total_bruto)
 
         '// exibe o resultado do problema que é o total com o desconto 
-        Console.Write("Total com desconto : " + total_desconto)
+        Console.Write("Total com desconto : " & total_desconto)
 
         Console.ReadKey() '// pausa o console até que algum evento do teclado seja executado
 
